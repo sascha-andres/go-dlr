@@ -14,6 +14,16 @@ failing a build).
 
 With -f defaulting to go.mod
 
+Within [git-commit](https://github.com/sascha-andres/git-commit) you can integrate the tool like this:
+
+    external-tools:
+      - name: detect local replacements
+        command:
+          - go-dlr
+        severity: error
+
+This calls go-dlr and would prohibit committing unless all replacements are eliminated.
+
 ## History
 
 |Version|Description|
