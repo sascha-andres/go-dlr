@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 )
 
+// HasLocals returns true if the go.mod contains local redirects
 func HasLocals(fileToParse string) (bool, error) {
 	data, err := ioutil.ReadFile(fileToParse)
 	if err != nil {
